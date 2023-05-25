@@ -6,3 +6,5 @@ See Fine tuning for data science https://www.datacamp.com/cheat-sheet/chatgpt-ch
  
 All depend on API Key named OPENAI_API_KEY being a secret in GitHub Repo  
 
+files training_data.jsonl and validation_data.jsonl were created from text in the notebook
+
