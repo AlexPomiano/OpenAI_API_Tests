@@ -15,7 +15,7 @@ response = openai.Completion.create(
 # print out the spreadsheet
 print(response['choices'][0]['text'])
 # put the response into a csv file with headers: Title, Year of release
-writeFile = open("spreadsheet.csv", "w")
+writeFile = open("spreadsheet.csv", "w", encoding="utf-8")
 writeFile.write("Title,Year of release\n")
 writeFile.write(response['choices'][0]['text'])
 writeFile.close()
