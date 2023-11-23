@@ -1,11 +1,10 @@
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.environ.get('OPENAI_API_KEY')
-response = openai.Image.create(
-  prompt="tango dancer with wild colored skirt and polka dots top\n\n",
-  n=1,
-  size="1024x1024"
-)
-image_url = response['data'][0]['url']
-print(image_url)
+client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
+
+print("Welcome to ImageGen")
+response = client.images.generate(prompt=" Hi def image of a couple dancing tango\n\n",
+size="1024x1024")
+image_url = response["data"]
+print(image_url)"
